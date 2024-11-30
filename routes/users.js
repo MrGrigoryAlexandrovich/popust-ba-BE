@@ -12,7 +12,6 @@ router.post("/create", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  console.log("x");
   try {
     const users = await userController.getUsers();
     res.status(201).json(users);
