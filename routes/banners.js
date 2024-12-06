@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/", (req, res) => {
   try {
     const banners = [
       "https://i.imgur.com/0rfelEz.png",
@@ -12,3 +12,5 @@ router.get("/", async (req, res) => {
     return res.status(400).json({ error: error.message });
   }
 });
+
+module.exports = router;
