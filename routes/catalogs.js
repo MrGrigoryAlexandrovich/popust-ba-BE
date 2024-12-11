@@ -20,6 +20,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/owner/:name", async (req, res) => {
+  try {
+    const catalogs = await catalogueController.getOwnerCatalogs(
+      req.params.name
+    );
+    return res.status(201).json(catalogs);
+  } catch (error) {
+    return res.status(400).json({ error: error.message });
+  }
+});
 router.patch("/update/:id", async (req, res) => {
   try {
     const catalogueId = req.params.id;

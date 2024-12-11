@@ -18,6 +18,15 @@ exports.getCatalogs = async () => {
   }
 };
 
+exports.getOwnerCatalogs = async (ownerName) => {
+  try {
+    const catalogs = await Catalogue.find({ owner: ownerName });
+    return catalogs;
+  } catch (error) {
+    throw new Error(`Error: ${error.message}`);
+  }
+};
+
 exports.updateCatalogue = async (catalogueId, updatedData) => {
   try {
     const updatedCatalogue = await Catalogue.findByIdAndUpdate(
