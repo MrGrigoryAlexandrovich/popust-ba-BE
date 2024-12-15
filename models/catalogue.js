@@ -7,9 +7,13 @@ const CatalogueSchema = new mongoose.Schema(
       required: [true, "Please enter title"],
       unique: true,
     },
+    ownerId: {
+      type: String,
+      required: [true, "Please enter owner id"],
+    },
     owner: {
       type: String,
-      required: [true, "Please enter title"],
+      required: [true, "Please enter owner"],
     },
     images: {
       type: [String],

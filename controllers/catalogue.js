@@ -18,9 +18,9 @@ exports.getCatalogs = async () => {
   }
 };
 
-exports.getOwnerCatalogs = async (ownerName) => {
+exports.getOwnerCatalogs = async (ownerId) => {
   try {
-    const catalogs = await Catalogue.find({ owner: ownerName });
+    const catalogs = await Catalogue.find({ ownerId });
     return catalogs;
   } catch (error) {
     throw new Error(`Error: ${error.message}`);
