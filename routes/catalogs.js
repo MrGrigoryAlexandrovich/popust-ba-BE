@@ -14,7 +14,7 @@ router.post("/create", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const catalogs = await catalogueController.getCatalogs();
-    return res.status(201).json(catalogs);
+    return res.status(200).json(catalogs);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }
