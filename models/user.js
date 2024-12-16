@@ -10,7 +10,6 @@ const UserSchema = new mongoose.Schema(
     logo: {
       type: String,
       required: [true, "Please enter logo"],
-      unique: true,
     },
     createdAt: {
       type: Date,
