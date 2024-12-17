@@ -24,12 +24,11 @@ const CatalogueSchema = new mongoose.Schema(
       default: Date.now,
     },
     startDate: {
-      type: String,
-      required: [true, "Please enter start date"],
+      default: Date.now,
     },
     expiredDate: {
       type: String,
-      required: [true, "Please enter expired date"],
+      default: Date.now,
     },
   },
   {
