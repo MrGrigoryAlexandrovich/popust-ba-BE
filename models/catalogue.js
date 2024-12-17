@@ -24,10 +24,11 @@ const CatalogueSchema = new mongoose.Schema(
       default: Date.now,
     },
     startDate: {
+      type: Date,
       default: Date.now,
     },
     expiredDate: {
-      type: String,
+      type: Date,
       default: Date.now,
     },
   },
